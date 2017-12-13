@@ -15,7 +15,6 @@ begin
 	driver.find_element(:xpath, '//*[@id="editAnchor1"]').click
 	File.open('stock_list.txt') do |file|
 	  file.each_line do |stock_number|
-	  	puts stock_number
 	  	if driver.find_elements(:id, 'addAnchor1').size >= 1 then
 			driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 			#untilメソッドは文字通り「～するまで」を意味する
