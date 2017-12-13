@@ -17,7 +17,6 @@ begin
 	  file.each_line do |stock_number|
 	  	puts stock_number
 	  	if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-	  		puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 			driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 			#untilメソッドは文字通り「～するまで」を意味する
 			wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -28,10 +27,7 @@ begin
 			driver.find_element(:id, '0').click
 			driver.save_screenshot(screenshot_path+stock_number+'.png')
 			driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-			puts "test1"
 			if driver.find_elements(:id, 'err_msg').size >= 1 then
-				puts driver.find_elements(:id, 'err_msg').size
-				puts "test1.5"
 				driver.switch_to.window driver.window_handle
 				if driver.find_elements(:id, 'TB_closeWindowButton').size >= 1 then
 					driver.find_element(:id, 'TB_closeWindowButton').click
@@ -40,7 +36,6 @@ begin
 					driver.find_element(:xpath, '//*[@id="form"]/div[1]/fieldset/ul/li[2]/a').click
 					driver.find_element(:id, 'editAnchor1').click
 					if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-						puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 						driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 						#untilメソッドは文字通り「～するまで」を意味する
 						wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -51,9 +46,7 @@ begin
 						driver.find_element(:id, '0').click
 						driver.save_screenshot(screenshot_path+stock_number+'.png')
 						driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-						puts "test2"
 						if driver.find_elements(:id, 'err_msg').size >= 1 then
-							puts driver.find_elements(:id, 'err_msg').size
 							driver.switch_to.window driver.window_handle
 							if driver.find_elements(:id, 'TB_closeWindowButton').size >= 1 then
 								driver.find_element(:id, 'TB_closeWindowButton').click
@@ -62,7 +55,6 @@ begin
 								driver.find_element(:xpath, '//*[@id="form"]/div[1]/fieldset/ul/li[3]/a').click
 								driver.find_element(:id, 'editAnchor1').click
 								if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-									puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 									driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 									#untilメソッドは文字通り「～するまで」を意味する
 									wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -73,9 +65,7 @@ begin
 									driver.find_element(:id, '0').click
 									driver.save_screenshot(screenshot_path+stock_number+'.png')
 									driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-									puts "test3"
 									if driver.find_elements(:id, 'err_msg').size >= 1 then
-										puts driver.find_elements(:id, 'err_msg').size
 										driver.switch_to.window driver.window_handle
 										if driver.find_elements(:id, 'TB_closeWindowButton').size >= 1 then
 											driver.find_element(:id, 'TB_closeWindowButton').click
@@ -84,7 +74,6 @@ begin
 											driver.find_element(:xpath, '//*[@id="form"]/div[1]/fieldset/ul/li[4]/a').click
 											driver.find_element(:id, 'editAnchor1').click
 											if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-												puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 												driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 												#untilメソッドは文字通り「～するまで」を意味する
 												wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -95,9 +84,7 @@ begin
 												driver.find_element(:id, '0').click
 												driver.save_screenshot(screenshot_path+stock_number+'.png')
 												driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-												puts "test4"
 												if driver.find_elements(:id, 'err_msg').size >= 1 then
-													puts driver.find_elements(:id, 'err_msg').size
 													driver.switch_to.window driver.window_handle
 													if driver.find_elements(:id, 'TB_closeWindowButton').size >= 1 then
 														driver.find_element(:id, 'TB_closeWindowButton').click
@@ -106,7 +93,6 @@ begin
 														driver.find_element(:xpath, '//*[@id="form"]/div[1]/fieldset/ul/li[4]/a').click
 														driver.find_element(:id, 'editAnchor1').click
 														if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-															puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 															driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 															#untilメソッドは文字通り「～するまで」を意味する
 															wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -117,9 +103,7 @@ begin
 															driver.find_element(:id, '0').click
 															driver.save_screenshot(screenshot_path+stock_number+'.png')
 															driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-															puts "test5"
 															if driver.find_elements(:id, 'err_msg').size >= 1 then
-																puts driver.find_elements(:id, 'err_msg').size
 																driver.switch_to.window driver.window_handle
 																if driver.find_elements(:id, 'TB_closeWindowButton').size >= 1 then
 																	driver.find_element(:id, 'TB_closeWindowButton').click
@@ -128,7 +112,6 @@ begin
 																	driver.find_element(:xpath, '//*[@id="form"]/div[1]/fieldset/ul/li[5]/a').click
 																	driver.find_element(:id, 'editAnchor1').click
 																	if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-																		puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 																		driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 																		#untilメソッドは文字通り「～するまで」を意味する
 																		wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -139,9 +122,7 @@ begin
 																		driver.find_element(:id, '0').click
 																		driver.save_screenshot(screenshot_path+stock_number+'.png')
 																		driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-																		puts "test6"
 																		if driver.find_elements(:id, 'err_msg').size >= 1 then
-																			puts driver.find_elements(:id, 'err_msg').size
 																			driver.switch_to.window driver.window_handle
 																			if driver.find_elements(:id, 'TB_closeWindowButton').size >= 1 then
 																				driver.find_element(:id, 'TB_closeWindowButton').click
@@ -150,7 +131,6 @@ begin
 																				driver.find_element(:xpath, '//*[@id="form"]/div[1]/fieldset/ul/li[6]/a').click
 																				driver.find_element(:id, 'editAnchor1').click
 																				if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-																					puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 																					driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 																					#untilメソッドは文字通り「～するまで」を意味する
 																					wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -161,9 +141,7 @@ begin
 																					driver.find_element(:id, '0').click
 																					driver.save_screenshot(screenshot_path+stock_number+'.png')
 																					driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-																					puts "test7"
 																					if driver.find_elements(:id, 'err_msg').size >= 1 then
-																						puts driver.find_elements(:id, 'err_msg').size
 																						driver.switch_to.window driver.window_handle
 																						if driver.find_elements(:id, 'TB_closeWindowButton').size >= 1 then
 																							driver.find_element(:id, 'TB_closeWindowButton').click
@@ -172,7 +150,6 @@ begin
 																							driver.find_element(:xpath, '//*[@id="form"]/div[1]/fieldset/ul/li[7]/a').click
 																							driver.find_element(:id, 'editAnchor1').click
 																							if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-																								puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 																								driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 																								#untilメソッドは文字通り「～するまで」を意味する
 																								wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -183,9 +160,7 @@ begin
 																								driver.find_element(:id, '0').click
 																								driver.save_screenshot(screenshot_path+stock_number+'.png')
 																								driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-																								puts "test8"
 																								if driver.find_elements(:id, 'err_msg').size >= 1 then
-																									puts driver.find_elements(:id, 'err_msg').size
 																									driver.switch_to.window driver.window_handle
 																									if driver.find_elements(:id, 'TB_closeWindowButton').size >= 1 then
 																										driver.find_element(:id, 'TB_closeWindowButton').click
@@ -194,7 +169,6 @@ begin
 																										driver.find_element(:xpath, '//*[@id="form"]/div[1]/fieldset/ul/li[8]/a').click
 																										driver.find_element(:id, 'editAnchor1').click
 																										if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-																											puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 																											driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 																											#untilメソッドは文字通り「～するまで」を意味する
 																											wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -205,9 +179,7 @@ begin
 																											driver.find_element(:id, '0').click
 																											driver.save_screenshot(screenshot_path+stock_number+'.png')
 																											driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-																											puts "test9"
 																											if driver.find_elements(:id, 'err_msg').size >= 1 then
-																												puts driver.find_elements(:id, 'err_msg').size
 																												driver.switch_to.window driver.window_handle
 																												if driver.find_elements(:id, 'TB_closeWindowButton').size >= 1 then
 																													driver.find_element(:id, 'TB_closeWindowButton').click
@@ -216,7 +188,6 @@ begin
 																													driver.find_element(:xpath, '//*[@id="form"]/div[1]/fieldset/ul/li[9]/a').click
 																													driver.find_element(:id, 'editAnchor1').click
 																													if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-																														puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 																														driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 																														#untilメソッドは文字通り「～するまで」を意味する
 																														wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -227,9 +198,7 @@ begin
 																														driver.find_element(:id, '0').click
 																														driver.save_screenshot(screenshot_path+stock_number+'.png')
 																														driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-																														puts "test10"
 																														if driver.find_elements(:id, 'err_msg').size >= 1 then
-																															puts driver.find_elements(:id, 'err_msg').size
 																															driver.switch_to.window driver.window_handle
 																															if driver.find_elements(:id, 'TB_closeWindowButton').size >= 1 then
 																																driver.find_element(:id, 'TB_closeWindowButton').click
@@ -238,7 +207,6 @@ begin
 																																driver.find_element(:xpath, '//*[@id="form"]/div[1]/fieldset/ul/li[10]/a').click
 																																driver.find_element(:id, 'editAnchor1').click
 																																if driver.find_elements(:id, 'addAnchor1').size >= 1 then
-																																	puts driver.find_elements(:xpath, 's//*[@id="addAnchor1"]').size >= 1
 																																	driver.find_element(:xpath, '//*[@id="addAnchor1"]').click
 																																	#untilメソッドは文字通り「～するまで」を意味する
 																																	wait.until {driver.find_element(:id, 'TB_iframeContent').displayed?}
@@ -249,7 +217,6 @@ begin
 																																	driver.find_element(:id, '0').click
 																																	driver.save_screenshot(screenshot_path+stock_number+'.png')
 																																	driver.find_element(:xpath, '//*[@id="str-main-inner"]/table/tbody/tr/td/table/tbody/tr/td/form/div[3]/ul/li/a').click
-																																	puts "test11"
 																																end
 																															end
 																														end
